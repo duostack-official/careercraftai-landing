@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerCraftAI — Coming Soon 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #000;
+        color: #fff;
+        font-family: "DM Sans", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* NAVBAR */
+
+      nav {
+        padding: 32px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-family: "Syne", sans-serif;
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: -0.5px;
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .coming {
+        font-size: 12px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .nav-year {
+        font-size: 13px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      /* MAIN */
+
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 80px 24px;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      /* HERO */
+
+      h1 {
+        font-family: "Syne", sans-serif;
+        font-size: clamp(42px, 8vw, 88px);
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -2px;
+        margin-bottom: 28px;
+      }
+
+      h1 .muted {
+        color: #5a5a5a;
+      }
+
+      /* TAGLINE */
+
+      .tagline {
+        font-size: 17px;
+        color: #8a8a8a;
+        font-weight: 300;
+        line-height: 1.7;
+        max-width: 520px;
+        margin-bottom: 72px;
+      }
+
+      .launch-year {
+        color: #ffffff;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+      }
+
+      /* DIVIDER */
+
+      .rule {
+        width: 40px;
+        height: 1px;
+        background: #333;
+        margin-bottom: 56px;
+      }
+
+      /* FOUNDERS */
+
+      .founders {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 140px;
+        margin: 60px auto 80px auto;
+      }
+      .founder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 160px;
+      }
+
+      /* PHOTO CARD */
+
+      .photo-card {
+        width: 240px;
+        height: 300px;
+        background: #0a0a0a;
+        border: 1px solid #1f1f1f;
+        border-radius: 16px;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
+      }
+
+      .photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      .photo-adjust {
+        object-position: center 30%;
+      }
+
+      /* TEXT */
+
+      .founder-name {
+        font-family: "Syne", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #e5e5e5;
+        margin-bottom: 4px;
+      }
+
+      .founder-role {
+        font-size: 13px;
+        color: #777;
+      }
+
+      /* CONTACT */
+
+      .contact {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .contact a {
+        font-size: 13px;
+        color: #777;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .contact a:hover {
+        color: #fff;
+      }
+
+      .sep {
+        width: 3px;
+        height: 3px;
+        background: #444;
+        border-radius: 50%;
+      }
+
+      /* FOOTER */
+
+      footer {
+        padding: 28px 48px;
+        border-top: 1px solid #111;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-text {
+        font-size: 12px;
+        color: #555;
+      }
+
+      /* TABLET */
+
+      @media (max-width: 900px) {
+        nav {
+          padding: 28px 36px;
+        }
+
+        main {
+          padding: 60px 24px;
+        }
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 640px) {
+        nav {
+          padding: 20px;
+        }
+
+        .founders {
+          justify-content: center;
+          gap: 40px;
+        }
+
+        footer {
+          flex-direction: column;
+          gap: 6px;
+          padding: 20px;
+        }
+
+        h1 {
+          letter-spacing: -1px;
+        }
+        /* TYPING TEXT */
+
+        .typing-container {
+          margin: 40px 0 60px 0;
+          font-family: "Syne", sans-serif;
+          font-size: clamp(48px, 6vw, 72px);
+          font-weight: 800;
+          letter-spacing: 0.03em;
+          color: #ffffff;
+          text-align: center;
+
+          height: 90px; /* locks the height */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        #typing-text {
+          white-space: nowrap;
+        }
+      }
+
+      .cursor {
+        display: inline-block;
+        margin-left: 6px;
+        animation: blink 1s infinite;
+        color: #aaa;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">CareerCraftAI</div>
+    </nav>
+
+    <main>
+      <h1>
+        Your career<br />
+        problems, <span class="muted">solved</span><br />
+        <span class="muted">here.</span>
+      </h1>
+
+      <p class="tagline">
+        One platform. Every tool you need to build, prepare, and launch your
+        career.
+        <span class="launch-year">Launching 2026.</span>
+      </p>
+      <div class="typing-container">
+        <span id="typing-text"></span>
+        <span class="cursor"></span>
+      </div>
+
+      <div class="founders">
+        <div class="founder">
+          <div class="photo-card">
+            <img src="mohan.png" class="photo-adjust" alt="Harishpranav R" />
+          </div>
+
+          <div class="founder-name">Mohan Harish E</div>
+          <div class="founder-role">Co-Founder & CEO</div>
+        </div>
+        <div class="founder">
+          <div class="photo-card">
+            <img src="harish.png" alt="Mohan Harish E" />
+          </div>
+
+          <div class="founder-name">Harishpranav R</div>
+          <div class="founder-role">Co-Founder & CEO</div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <a
+          href="mailto:harishpranav.work@gmail.com?subject=CareerCraftAI Inquiry"
+        >
+          hello@careercraftai.in
+        </a>
+
+        <div class="sep"></div>
+
+        <a
+          href="https://www.linkedin.com/in/duostack-organization-7a80853b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          >LinkedIn</a
+        >
+
+        <div class="sep"></div>
+
+        <a
+          href="https://www.instagram.com/duostack_official?igsh=MTV6aThpMml4aDQ1dw=="
+          target="_blank"
+          >Instagram</a
+        >
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-text">© 2026 CareerCraftAI. All rights reserved.</div>
+
+      <div class="footer-text">Built in India 🇮🇳</div>
+    </footer>
+    <script>
+      const text = "Something Bigger is Coming Soon";
+      const typingSpeed = 70;
+      const eraseSpeed = 40;
+      const delay = 1800;
+
+      let index = 0;
+      let typing = true;
+
+      function typeLoop() {
+        const el = document.getElementById("typing-text");
+
+        if (typing) {
+          if (index < text.length) {
+            el.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeLoop, typingSpeed);
+          } else {
+            typing = false;
+            setTimeout(typeLoop, delay);
+          }
+        } else {
+          if (index > 0) {
+            el.textContent = text.substring(0, index - 1);
+            index--;
+            setTimeout(typeLoop, eraseSpeed);
+          } else {
+            typing = true;
+            setTimeout(typeLoop, typingSpeed);
+          }
+        }
+      }
+
+      typeLoop();
+    </script>
+  </body>
+</html>
