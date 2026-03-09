@@ -4,15 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CareerCraftAI — Coming Soon 2026</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-
     <style>
       *,
       *::before,
@@ -31,44 +28,22 @@
         flex-direction: column;
       }
 
-      /* NAVBAR */
-
+      /* NAV */
       nav {
-        padding: 32px 48px;
+        padding: 28px 48px;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
-
       .logo {
         font-family: "Syne", sans-serif;
         font-weight: 800;
         font-size: 20px;
         letter-spacing: -0.5px;
-      }
-
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .coming {
-        font-size: 12px;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        color: #ffffff;
-        font-weight: 600;
-      }
-
-      .nav-year {
-        font-size: 13px;
-        font-weight: 700;
-        color: #ffffff;
+        color: #fff;
       }
 
       /* MAIN */
-
       main {
         flex: 1;
         display: flex;
@@ -76,220 +51,243 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 80px 24px;
-        max-width: 900px;
-        margin: auto;
+        padding: 60px 24px;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
       }
 
       /* HERO */
-
       h1 {
         font-family: "Syne", sans-serif;
-        font-size: clamp(42px, 8vw, 88px);
+        font-size: clamp(36px, 8vw, 88px);
         font-weight: 800;
         line-height: 1.05;
         letter-spacing: -2px;
-        margin-bottom: 28px;
+        margin-bottom: 24px;
+        width: 100%;
       }
-
       h1 .muted {
-        color: #5a5a5a;
+        color: #3a3a3a;
       }
 
       /* TAGLINE */
-
       .tagline {
-        font-size: 17px;
+        font-size: clamp(14px, 2vw, 17px);
         color: #8a8a8a;
         font-weight: 300;
         line-height: 1.7;
-        max-width: 520px;
-        margin-bottom: 72px;
+        max-width: 480px;
+        margin-bottom: 48px;
+        padding: 0 16px;
       }
-
       .launch-year {
-        color: #ffffff;
+        color: #fff;
         font-weight: 600;
-        letter-spacing: 0.05em;
       }
 
-      /* DIVIDER */
-
-      .rule {
-        width: 40px;
-        height: 1px;
-        background: #333;
-        margin-bottom: 56px;
+      /* TYPING */
+      .typing-container {
+        margin-bottom: 64px;
+        font-family: "Syne", sans-serif;
+        font-size: clamp(18px, 4vw, 36px);
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        text-align: center;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+      }
+      #typing-text {
+        white-space: nowrap;
+      }
+      .cursor {
+        display: inline-block;
+        margin-left: 4px;
+        animation: blink 1s infinite;
+        color: #666;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
       }
 
       /* FOUNDERS */
-
       .founders {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        gap: 140px;
-        margin: 60px auto 80px auto;
+        gap: 80px;
+        margin-bottom: 72px;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 16px;
       }
       .founder {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        max-width: 160px;
       }
 
       /* PHOTO CARD */
-
       .photo-card {
-        width: 240px;
-        height: 300px;
+        width: min(200px, 42vw);
+        height: min(260px, 54vw);
         background: #0a0a0a;
         border: 1px solid #1f1f1f;
-        border-radius: 16px;
-        padding: 10px;
-        margin-bottom: 16px;
-        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
+        border-radius: 14px;
+        padding: 8px;
+        margin-bottom: 14px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+        overflow: hidden;
       }
-
       .photo-card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 12px;
+        border-radius: 10px;
       }
       .photo-adjust {
         object-position: center 30%;
       }
 
-      /* TEXT */
-
       .founder-name {
         font-family: "Syne", sans-serif;
-        font-size: 18px;
+        font-size: clamp(14px, 2.5vw, 18px);
         font-weight: 700;
         color: #e5e5e5;
         margin-bottom: 4px;
       }
-
       .founder-role {
-        font-size: 13px;
+        font-size: clamp(11px, 1.8vw, 13px);
         color: #777;
       }
 
       /* CONTACT */
-
       .contact {
         display: flex;
         align-items: center;
-        gap: 24px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0 16px;
       }
-
       .contact a {
-        font-size: 13px;
-        color: #777;
+        font-size: clamp(12px, 1.8vw, 13px);
+        color: #666;
         text-decoration: none;
         transition: color 0.2s;
       }
-
       .contact a:hover {
         color: #fff;
       }
-
       .sep {
         width: 3px;
         height: 3px;
-        background: #444;
+        background: #333;
         border-radius: 50%;
+        flex-shrink: 0;
       }
 
       /* FOOTER */
-
       footer {
-        padding: 28px 48px;
+        padding: 24px 48px;
         border-top: 1px solid #111;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
       }
-
       .footer-text {
         font-size: 12px;
-        color: #555;
+        color: #444;
       }
 
-      /* TABLET */
+      /* ── RESPONSIVE ── */
 
-      @media (max-width: 900px) {
+      /* Tablet */
+      @media (max-width: 768px) {
         nav {
-          padding: 28px 36px;
+          padding: 24px 28px;
         }
-
-        main {
-          padding: 60px 24px;
+        h1 {
+          letter-spacing: -1px;
         }
-      }
-
-      /* MOBILE */
-
-      @media (max-width: 640px) {
-        nav {
-          padding: 20px;
-        }
-
         .founders {
-          justify-content: center;
           gap: 40px;
         }
-
         footer {
-          flex-direction: column;
-          gap: 6px;
+          padding: 20px 28px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 480px) {
+        nav {
           padding: 20px;
         }
 
         h1 {
+          font-size: clamp(32px, 9vw, 48px);
           letter-spacing: -1px;
         }
-        /* TYPING TEXT */
 
         .typing-container {
-          margin: 40px 0 60px 0;
-          font-family: "Syne", sans-serif;
-          font-size: clamp(48px, 6vw, 72px);
-          font-weight: 800;
-          letter-spacing: 0.03em;
-          color: #ffffff;
-          text-align: center;
-
-          height: 90px; /* locks the height */
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          font-size: clamp(14px, 4.5vw, 20px);
+          min-height: 36px;
+          margin-bottom: 48px;
         }
         #typing-text {
-          white-space: nowrap;
+          white-space: normal;
+          text-align: center;
+        }
+
+        .founders {
+          gap: 28px;
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .photo-card {
+          width: min(140px, 38vw);
+          height: min(180px, 48vw);
+          border-radius: 12px;
+          padding: 6px;
+        }
+
+        .contact {
+          gap: 14px;
+        }
+
+        footer {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 20px;
+          gap: 4px;
         }
       }
 
-      .cursor {
-        display: inline-block;
-        margin-left: 6px;
-        animation: blink 1s infinite;
-        color: #aaa;
-      }
-
-      @keyframes blink {
-        0% {
-          opacity: 1;
+      /* Very small phones */
+      @media (max-width: 360px) {
+        .founders {
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
         }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
+        .photo-card {
+          width: 160px;
+          height: 200px;
         }
       }
     </style>
@@ -312,27 +310,26 @@
         career.
         <span class="launch-year">Launching 2026.</span>
       </p>
+
       <div class="typing-container">
         <span id="typing-text"></span>
-        <span class="cursor"></span>
+        <span class="cursor">|</span>
       </div>
 
       <div class="founders">
         <div class="founder">
           <div class="photo-card">
-            <img src="mohan.png" class="photo-adjust" alt="Harishpranav R" />
+            <img src="mohan.png" class="photo-adjust" alt="Mohan Harish E" />
           </div>
-
           <div class="founder-name">Mohan Harish E</div>
-          <div class="founder-role">Co-Founder & CEO</div>
+          <div class="founder-role">Co-Founder &amp; CEO</div>
         </div>
         <div class="founder">
           <div class="photo-card">
-            <img src="harish.png" alt="Mohan Harish E" />
+            <img src="harish.png" alt="Harishpranav R" />
           </div>
-
           <div class="founder-name">Harishpranav R</div>
-          <div class="founder-role">Co-Founder & CEO</div>
+          <div class="founder-role">Co-Founder &amp; CEO</div>
         </div>
       </div>
 
@@ -342,20 +339,14 @@
         >
           hello@careercraftai.in
         </a>
-
         <div class="sep"></div>
-
         <a
-          href="https://www.linkedin.com/in/duostack-organization-7a80853b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          href="https://www.linkedin.com/in/duostack-organization-7a80853b6"
           target="_blank"
           >LinkedIn</a
         >
-
         <div class="sep"></div>
-
-        <a
-          href="https://www.instagram.com/duostack_official?igsh=MTV6aThpMml4aDQ1dw=="
-          target="_blank"
+        <a href="https://www.instagram.com/duostack_official" target="_blank"
           >Instagram</a
         >
       </div>
@@ -363,25 +354,22 @@
 
     <footer>
       <div class="footer-text">© 2026 CareerCraftAI. All rights reserved.</div>
-
       <div class="footer-text">Built in India 🇮🇳</div>
     </footer>
+
     <script>
       const text = "Something Bigger is Coming Soon";
       const typingSpeed = 70;
       const eraseSpeed = 40;
       const delay = 1800;
-
       let index = 0;
       let typing = true;
 
       function typeLoop() {
         const el = document.getElementById("typing-text");
-
         if (typing) {
           if (index < text.length) {
-            el.textContent += text.charAt(index);
-            index++;
+            el.textContent += text.charAt(index++);
             setTimeout(typeLoop, typingSpeed);
           } else {
             typing = false;
@@ -389,8 +377,7 @@
           }
         } else {
           if (index > 0) {
-            el.textContent = text.substring(0, index - 1);
-            index--;
+            el.textContent = text.substring(0, --index);
             setTimeout(typeLoop, eraseSpeed);
           } else {
             typing = true;
@@ -398,7 +385,6 @@
           }
         }
       }
-
       typeLoop();
     </script>
   </body>
